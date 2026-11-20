@@ -65,6 +65,31 @@ Run Clino across all Go packages:
 ./bin/clino --dir . --mode strict
 ```
 
+## Reports, Filtering and Suppression (0.2.0)
+
+```bash
+# List the rule matrix with severities and CWE mappings
+clino -list-rules
+
+# SARIF for GitHub code scanning
+clino -dir . -mode strict -format sarif -output clino.sarif
+
+# Only errors from two rules, skipping generated code
+clino -dir . -rules CLINO-001,CLINO-007 -min-severity error -exclude gen,testdata
+
+# Fail CI on warnings as well as errors
+clino -dir . -fail-on warning
+```
+
+Suppress a reviewed finding on the same line or the line below the comment:
+
+```go
+// clino:ignore CLINO-007 -- the header sits 8 bytes before the payload
+hdr := unsafe.Add(p, -8)
+```
+
+Suppressed findings are counted in the report summary so they stay visible in review.
+
 ## Performance & Speed
 
 - **Scan Speed**: > 300,000 lines of Go code per second.

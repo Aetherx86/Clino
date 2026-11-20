@@ -68,6 +68,14 @@ python3 .github/scripts/repo_guard.py . --strict
 go test -v -race ./...
 ```
 
+## 0.2.0 변경 사항
+
+- 심각도, CWE, 설명, 해결 방법이 포함된 8개 규칙(`CLINO-001`~`CLINO-008`), `-list-rules`로 확인
+- 새 규칙: FFI 스택 탈출, `reflect.StringHeader`, 슬라이스/문자열 헤더 재해석, 포인터 산술 경계, CGo 피닝 위험
+- `// clino:ignore [규칙] -- 사유` 인라인 억제 (요약에 개수 표시)
+- 출력 형식: `text`, `json`, SARIF 2.1.0 (`-format sarif`)
+- `-rules`, `-exclude-rules`, `-min-severity`, `-exclude`, `-fail-on`, `-output`, 병렬 `-workers` (결정적 정렬)
+
 ## 라이선스
 
 MIT License. Copyright (c) 2026 Jeong Hoon Kim (Aether Systems & Research Lab).
