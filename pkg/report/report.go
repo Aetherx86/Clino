@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/Aetherx86/Clino/pkg/analyzer"
+	"github.com/omakasekim/Clino/pkg/analyzer"
 )
 
 // Format identifies a supported report output format.
@@ -22,7 +22,7 @@ const (
 
 const (
 	ToolName = "Clino"
-	ToolURL  = "https://github.com/Aetherx86/Clino"
+	ToolURL  = "https://github.com/omakasekim/Clino"
 )
 
 // ParseFormat validates and normalizes a report format string.

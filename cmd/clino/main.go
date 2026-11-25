@@ -10,8 +10,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Aetherx86/Clino/pkg/analyzer"
-	"github.com/Aetherx86/Clino/pkg/report"
+	"github.com/omakasekim/Clino/pkg/analyzer"
+	"github.com/omakasekim/Clino/pkg/report"
 )
 
 const Version = "0.2.0"

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Aetherx86/Clino/pkg/analyzer"
+	"github.com/omakasekim/Clino/pkg/analyzer"
 )
 
 const mixedSource = `package p

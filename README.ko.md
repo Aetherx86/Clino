@@ -46,7 +46,7 @@ Clino는 AST 할당 노드와 변수 바인딩을 분석하여, 모든 `uintptr`
 ## 설치 및 빌드
 
 ```bash
-git clone https://github.com/Aetherx86/Clino.git
+git clone https://github.com/omakasekim/Clino.git
 cd Clino
 go build -o bin/clino ./cmd/clino
 ```
